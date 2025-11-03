@@ -1,6 +1,7 @@
 .todos-empty {
   display: none;
-  justify-content: center;
+  margin-top: 100px;
+  justify-content: flex-start;
   flex-direction: column;
   user-select: none;
 }
