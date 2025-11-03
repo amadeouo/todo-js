@@ -1,0 +1,26 @@
+.add-todo__button {
+  position: sticky;
+  z-index: 20;
+  bottom: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-purple);
+  box-shadow: var(--box-shadow-hover);
+
+  &:hover {
+    background-color: var(--color-hover);
+    box-shadow: none;
+  }
+
+  &:active {
+    scale: 1.1;
+  }
+}
+
+.add-todo__button svg {
+  color: white;
+}

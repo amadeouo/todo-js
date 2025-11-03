@@ -1,0 +1,20 @@
+.header__theme-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-color: var(--color-purple);
+  border-radius: var(--border-radius-big);
+  box-shadow: var(--box-shadow-hover);
+
+  &:hover {
+    background-color: var(--color-hover);
+    box-shadow: none;
+  }
+}
+
+.header__theme-switcher-icon {
+  width: 22px;
+  height: 22px;
+  color: white;
+}

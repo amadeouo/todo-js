@@ -1,0 +1,16 @@
+.todos {
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  height: 100vh;
+}
+
+.todos::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+

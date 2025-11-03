@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+  background-color: var(--color-bg);
+  transition-duration: 0.2s;
+}
+
+button {
+  transition-duration: var(--transition-duration);
+}
+
+.container {
+  max-width: 750px;
+}
+
+.container-small {
+  max-width: 520px;
+}
+
+.todo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.small-width {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.small-width-error-message {
+  font-size: 30px;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.button-wrappers {
+  position: fixed;
+  bottom: 50px;
+  right: calc((100vw - 750px) / 2 + 20px);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 100;
+  align-items: center;
+}
+
+/*.notification-delete {*/
+/*  position: relative;*/
+/*}*/
+
+/*.add-todo__button {*/
+/*  position: relative;*/
+/*}*/

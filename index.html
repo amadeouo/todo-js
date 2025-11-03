@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="ie=edge"
+  >
+  <title>Todo | ITAM </title>
+  <link rel="stylesheet" href="styles/index.css">
+  <script src="scripts/todo.js" defer></script>
+</head>
+<body>
+  <div class="todo" data-js-todo>
+    <div class="add-todo__modal" data-js-todo-add-todos-modal> <!-- is-open -->
+      <div class="modal-wrapper container-small">
+        <h2 class="modal-title">new note</h2>
+        <form class="modal-form" data-js-todo-modal-form>
+          <input
+            class="modal-form__input"
+            id="add-todo"
+            placeholder=""
+            name="title"
+            data-js-todo-modal-input
+          />
+          <label
+            class="modal-form__label"
+            for="add-todo"
+          >
+            input your note...
+          </label>
+          <button
+            class="modal-form__close-button"
+            type="button"
+            data-js-todo-modal-close-button
+          >
+            cancel
+          </button>
+          <button
+            class="modal-form__add-button"
+            type="submit"
+            data-js-todo-modal-add-button
+          >
+            apply
+          </button>
+        </form>
+      </div>
+    </div>
+    <header class="header container">
+        <div class="header__logo">
+          <h1 class="header__logo-text"><a href="index.html">TODO LIST</a></h1>
+        </div>
+        <form class="header__search-form" data-js-todo-search-form>
+          <input
+            class="header__search-input"
+            type="search"
+            id="search"
+            placeholder=""
+            data-js-todo-search-form-input
+          >
+          <label
+            class="header__search-label"
+            for="search"
+          >
+            Search note...
+          </label>
+        </form>
+        <div class="header__selector" data-js-todo-selector>
+          <div class="header__selector-button-wrapper">
+            <span class="header__selector-text" data-js-todo-selector-text>ALL TASKS</span>
+            <svg class="header__selector-icon" width="12" height="6" viewBox="0 0 8 5" xmlns="http://www.w3.org/2000/svg" data-js-todo-arrow> <!-- is-rotate -->
+              <path d="M4 4L1 1" stroke="#F7F7F7" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 1L4 4" stroke="#F7F7F7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="header__selector-dropdown-list" data-js-todo-dropdown-list> <!-- is-visible-button -->
+            <p class="header__selector-dropdown-item" data-js-todo-dropdown-item>ALL TASKS</p>
+            <p class="header__selector-dropdown-item" data-js-todo-dropdown-item>CHECKED</p>
+            <p class="header__selector-dropdown-item" data-js-todo-dropdown-item>UNCHECKED</p>
+          </div>
+        </div>
+        <button class="header__theme-switcher" data-js-todo-theme-switcher>
+          <svg class="header__theme-switcher-icon" width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1249 0.548798C11.3387 0.917354 11.321 1.3762 11.0791 1.72705C10.3455 2.79152 9.91599 4.08062 9.91599 5.47334C9.91599 9.12428 12.8757 12.084 16.5266 12.084C17.9194 12.084 19.2085 11.6545 20.2729 10.9208C20.6238 10.6791 21.0826 10.6613 21.4512 10.8751C21.8197 11.089 22.0319 11.4962 21.9961 11.9208C21.5191 17.567 16.7867 22 11.0178 22C4.93282 22 0 17.0672 0 10.9822C0 5.21328 4.43301 0.480873 10.0792 0.00392422C10.5038 -0.0319387 10.911 0.180242 11.1249 0.548798ZM8.17985 2.63461C4.70452 3.81573 2.20355 7.10732 2.20355 10.9822C2.20355 15.8502 6.14981 19.7964 11.0178 19.7964C14.8927 19.7964 18.1843 17.2955 19.3654 13.8202C18.4741 14.1232 17.5191 14.2875 16.5266 14.2875C11.6587 14.2875 7.71244 10.3413 7.71244 5.47334C7.71244 4.48086 7.87682 3.52582 8.17985 2.63461Z" fill="#F7F7F7"/>
+          </svg>
+        </button>
+    </header>
+    <main class="todos container">
+      <div class="todos-empty container-small" data-js-empty-message> <!-- is-visible-->
+        <img
+          class="todos-empty__image"
+          src="public/icons/error-message.svg"
+          width="221"
+          height="174"
+          alt="image if you have no one todo's"
+          loading="lazy"
+        />
+        <span class="todos-empty__message">Empty...</span>
+      </div>
+      <div class="todos-wrapper-form container-small" data-js-todo-todos-wrapper></div>
+    </main>
+    <div class="button-wrappers">
+      <button class="notification-delete" data-js-todo-notification-delete> <!--is-visible-notification-->
+        <div class="notification-delete__content">
+          <div class="notification-delete__left">
+            <span class="notification-delete__counter-number" data-js-todo-number-counter>4</span>
+            <svg class="notification-delete__counter-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="14" r="13" stroke="white" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="notification-delete__right">
+            <span class="notification-delete__text">UNDO</span>
+            <svg class="notification-delete__back-icon " width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 5.4394V11.4318C14.9993 12.1127 14.7236 12.7656 14.2333 13.247C13.743 13.7285 13.0782 13.9993 12.3848 14H7.15436V13.1439H12.3848C12.847 13.1433 13.29 12.9627 13.6168 12.6417C13.9437 12.3208 14.1276 11.8857 14.1283 11.4318V5.4394C14.1276 4.98553 13.9437 4.55044 13.6168 4.2295C13.29 3.90857 12.847 3.72796 12.3848 3.72728H1.66851L3.97513 5.99242L3.35881 6.59765L0 3.29925L3.35881 0L3.97513 0.605234L1.66851 2.87122H12.3848C13.0782 2.8719 13.743 3.1427 14.2333 3.62418C14.7236 4.10566 14.9993 4.75849 15 5.4394Z" fill="#F7F7F7"/>
+            </svg>
+          </div>
+        </div>
+      </button>
+      <button class="add-todo__button" data-js-todo-add-todos>
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 22.5C10.5 22.8978 10.658 23.2794 10.9393 23.5607C11.2206 23.842 11.6022 24 12 24C12.3978 24 12.7794 23.842 13.0607 23.5607C13.342 23.2794 13.5 22.8978 13.5 22.5V13.5H22.5C22.8978 13.5 23.2794 13.342 23.5607 13.0607C23.842 12.7794 24 12.3978 24 12C24 11.6022 23.842 11.2206 23.5607 10.9393C23.2794 10.658 22.8978 10.5 22.5 10.5H13.5V1.5C13.5 1.10218 13.342 0.720644 13.0607 0.43934C12.7794 0.158035 12.3978 0 12 0C11.6022 0 11.2206 0.158035 10.9393 0.43934C10.658 0.720644 10.5 1.10218 10.5 1.5V10.5H1.5C1.10218 10.5 0.720644 10.658 0.43934 10.9393C0.158035 11.2206 0 11.6022 0 12C0 12.3978 0.158035 12.7794 0.43934 13.0607C0.720644 13.342 1.10218 13.5 1.5 13.5H10.5V22.5Z" fill="#F7F7F7"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+  <div class="small-width">
+    <img
+      src="public/icons/error-message.svg"
+      alt="small devices error message"
+      loading="lazy"
+      width="442"
+      height="348"
+    />
+    <span class="small-width-error-message">Your device is too small, please change it</span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@media (max-width: 760px) {
+  .header, .header__logo {
+    max-width: 520px;
+  }
+
+  .header__search-form {
+    max-width: 520px;
+  }
+
+  .notification-delete {
+    margin-right: 135px;
+  }
+
+  .form-buttons {
+    display: flex;
+  }
+
+  .button-wrappers {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .todo {
+    display: none;
+  }
+
+  .small-width {
+    display: flex;
+  }
+}

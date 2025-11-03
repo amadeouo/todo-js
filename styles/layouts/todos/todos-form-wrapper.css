@@ -1,0 +1,127 @@
+.todos-wrapper-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 17px;
+  width: 520px;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  color: var(--color-black);
+
+  &:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-purple);
+    padding-inline: 17px;
+  }
+
+  &:hover .form-buttons {
+    display: flex;
+  }
+}
+
+.form--checked {
+  opacity: 0.6;
+}
+
+.form-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+
+.form-input__checkbox {
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border: var(--border-purple);
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+}
+
+.form-input__checkbox:checked {
+  background-color: var(--color-purple);
+  background-image: url("../../../public/icons/check.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  transition-duration: 0.2s;
+}
+
+.form-input__title, .form-input__edit {
+  width: 400px;
+  padding: 7px;
+  font-size: 20px;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.form-input__edit {
+  border: 1px solid var(--color-white);
+}
+
+.form-input__edit:focus {
+  border-color: var(--color-black);
+  border-radius: var(--border-radius-big);
+}
+
+.dark .form-input__edit {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+
+.form-input__checkbox:checked + .form-input__title {
+  color: var(--color-black);
+  opacity: 0.5;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.form-buttons {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.form-buttons button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-big);
+
+  &:hover {
+    border: var(--border-purple);
+  }
+}
+
+.form-buttons .form-buttons-delete {
+  &:hover {
+    border: 1px solid #E50000;
+  }
+}
+
+
+.form-buttons button svg path {
+  stroke: var(--color-black);
+}
+
+.form-buttons-delete:hover svg path {
+  stroke: #E50000;
+}
+
+.form-buttons-edit:hover svg path {
+  stroke: var(--color-purple);
+}
+
+

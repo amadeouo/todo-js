@@ -1,0 +1,19 @@
+.todos-empty {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+}
+
+.todos-empty__message {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: var(--color-black);
+  user-select: text;
+}
+
+.is-visible {
+  display: flex;
+}

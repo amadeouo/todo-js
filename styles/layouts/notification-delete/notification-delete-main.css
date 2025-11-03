@@ -1,0 +1,35 @@
+.notification-delete {
+  display: none;
+  width: 122px;
+  height: 38px;
+  color: white;
+  border: var(--border-purple);
+  border-radius: var(--border-radius-big);
+  background-color: var(--color-purple);
+  margin-right: 220px;
+}
+
+.notification-delete__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.notification-delete__counter-number {
+  position: relative;
+  padding-left: 5px;
+}
+
+.notification-delete__counter-icon {
+  position: absolute;
+  left: 7px;
+  top: 12px;
+}
+
+.notification-delete__text {
+  font-size: 16px;
+}
+
+.is-visible-notification {
+  display: block;
+}
